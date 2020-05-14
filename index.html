@@ -13,6 +13,8 @@
     <br>
     <input type="number" id="demo2">Enter second Number</input>
     <br>
+    <button type="button" onclick="Clear()">Clear</button>
+    <br>
     <button type="button" onclick="Addition()">Addition</button>
     <br>
     <button type="button" onclick="Subtraction()">Subtraction</button>
@@ -21,59 +23,69 @@
     <br>
     <button type="button" onclick="Division()">Division</button>
     <br>
-    <p id='display'>
+    <p id='display'></p>
 </center>
 <script>
- var x,y,z;
+ var x,y;
  function entry()
  {
    x=document.getElementById('demo1').value;
    y=document.getElementById('demo2').value; 
+   if(x=='' || y=='')
+     return true;
+   else
+     return false;  
+ }
+ function Clear()
+ {
+     document.getElementById('demo1').value='';
+     document.getElementById('demo2').value='';
  }
  function Addition()
  {   
-    //x=document.getElementById('demo1').value;
-    //y=document.getElementById('demo2').value;
-    //alert(x);
-    entry();
+    if(entry())
+      alert("Please enter value");
+    else 
+    {
      var sum;
      sum=parseInt(x)+parseInt(y);
      document.getElementById('display').innerHTML='Addition: ' +sum;
-     //alert(sum);
- }
+    
+    }
+ }   
  function Subtraction()
  {   
-    //x=document.getElementById('demo1').value;
-    //y=document.getElementById('demo2').value;
-    //alert(x);
-    entry(); 
+    if(entry())
+      alert("Please enter value");
+    else
+    {
     var diff;
      diff=x-y;
      document.getElementById('display').innerHTML='Subtraction: ' +diff;
-     //alert(sum);
- }
+    }
+}
  function Multiplication()
  {   
-    //x=document.getElementById('demo1').value;
-    //y=document.getElementById('demo2').value;
-    //alert(x);
-    entry(); 
+    if(entry())
+      alert("Please enter value");
+    else
+    {
     var mul;
      mul=x*y;
      document.getElementById('display').innerHTML='Multiplication: ' +mul;
-     //alert(sum);
- }
+    } 
+}
  function Division()
  {   
-    //x=document.getElementById('demo1').value;
-    //y=document.getElementById('demo2').value;
-    //alert(x);
-    entry(); 
+    if(entry())
+      alert("Please enter value");
+    else
+    { 
     var div;
      div=x/y;
-     document.getElementById('display').innerHTML='Division: ' +div;
-     //alert(sum);
- }
+     document.getElementById('display').innerHTML='Division: ' +div;   
+    }
+}
 </script>
 </body>
 </html>

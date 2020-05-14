@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body style="background-color:lightseagreen">
+<center>
+    <h1 style="color: navy"><b><i>Calculator</i></b></h1>
+    <input type="number" id="demo1">Enter first Number</input>
+    <br>
+    <input type="number" id="demo2">Enter second Number</input>
+    <br>
+    <button type="button" onclick="Addition()">Addition</button>
+    <br>
+    <button type="button" onclick="Subtraction()">Subtraction</button>
+    <br>
+    <button type="button" onclick="Multiplication()">Multiplication</button>
+    <br>
+    <button type="button" onclick="Division()">Division</button>
+    <br>
+    <p id='display'>
+</center>
+<script>
+ var x,y,z;
+ function entry()
+ {
+   x=document.getElementById('demo1').value;
+   y=document.getElementById('demo2').value; 
+ }
+ function Addition()
+ {   
+    //x=document.getElementById('demo1').value;
+    //y=document.getElementById('demo2').value;
+    //alert(x);
+    entry();
+     var sum;
+     sum=parseInt(x)+parseInt(y);
+     document.getElementById('display').innerHTML='Addition: ' +sum;
+     //alert(sum);
+ }
+ function Subtraction()
+ {   
+    //x=document.getElementById('demo1').value;
+    //y=document.getElementById('demo2').value;
+    //alert(x);
+    entry(); 
+    var diff;
+     diff=x-y;
+     document.getElementById('display').innerHTML='Subtraction: ' +diff;
+     //alert(sum);
+ }
+ function Multiplication()
+ {   
+    //x=document.getElementById('demo1').value;
+    //y=document.getElementById('demo2').value;
+    //alert(x);
+    entry(); 
+    var mul;
+     mul=x*y;
+     document.getElementById('display').innerHTML='Multiplication: ' +mul;
+     //alert(sum);
+ }
+ function Division()
+ {   
+    //x=document.getElementById('demo1').value;
+    //y=document.getElementById('demo2').value;
+    //alert(x);
+    entry(); 
+    var div;
+     div=x/y;
+     document.getElementById('display').innerHTML='Division: ' +div;
+     //alert(sum);
+ }
+</script>
+</body>
+</html>

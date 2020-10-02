@@ -13,20 +13,29 @@
     <br>
     <input type="number" id="demo2">Enter second Number</input>
     <br>
+    <br>
     <button type="button" onclick="Clear()">Clear</button>
+    <br>
+    <br>
+    <button type="button" onclick="from()">From</button>
+    <button type="button" onclick="to()">To</button>
+    <br>
     <br>
     <button type="button" onclick="Addition()">Addition</button>
     <br>
+    <br>
     <button type="button" onclick="Subtraction()">Subtraction</button>
     <br>
+    <br>
     <button type="button" onclick="Multiplication()">Multiplication</button>
+    <br>
     <br>
     <button type="button" onclick="Division()">Division</button>
     <br>
     <p id='display'></p>
 </center>
 <script>
- var x,y;
+ var x,y,r;
  function entry()
  {
    x=document.getElementById('demo1').value;
@@ -41,6 +50,7 @@
      document.getElementById('demo1').value='';
      document.getElementById('demo2').value='';
  }
+
  function Addition()
  {   
     if(entry())
@@ -49,6 +59,7 @@
     {
      var sum;
      sum=parseInt(x)+parseInt(y);
+     r = sum;
      document.getElementById('display').innerHTML='Addition: ' +sum;
     
     }
@@ -61,6 +72,7 @@
     {
     var diff;
      diff=x-y;
+     r = diff;
      document.getElementById('display').innerHTML='Subtraction: ' +diff;
     }
 }
@@ -72,6 +84,7 @@
     {
     var mul;
      mul=x*y;
+     r = mul;
      document.getElementById('display').innerHTML='Multiplication: ' +mul;
     } 
 }
@@ -83,9 +96,11 @@
     { 
     var div;
      div=x/y;
+     r=div;
      document.getElementById('display').innerHTML='Division: ' +div;   
     }
 }
 </script>
+<script src="./feature.js"></script>
 </body>
 </html>
